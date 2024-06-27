@@ -11,17 +11,17 @@ console.log(3 + .3); // we can perform arithmetic operations in the console.log(
 // undefined => When we define an variable but not assign any value to that
 // symbol => for uniquness
 
-let age = 19 ; // number
-let ageInSec = 616118400 ; // bigInt (but js count it as number) !
+let age = 19 ;                    // number
+let ageInSec = 616118400 ;        // bigInt (but js count it as number) !
 let dateOfBirth = '17 Dec 2004' ; // String
-let isAdult = true ; // Boolean
-let girlFriend = null ; // Null
-let goal ; // Undefined
+let isAdult = true ;              // Boolean
+let girlFriend = null ;           // Null
+let goal ;                        // Undefined
 
 // typeof : The JavaScript typeof operator returns the data type of a variable or expression.
-console.log(typeof age); // number
-console.log(typeof ageInSec); // number 
-console.log(typeof dateOfBirth); // string
-console.log(typeof isAdult); // boolean
+console.log(typeof age);        // number
+console.log(typeof ageInSec);   // number 
+console.log(typeof dateOfBirth);// string
+console.log(typeof isAdult);    // boolean
 console.log(typeof girlFriend); // Object 
-console.log(typeof goal); // undefined
+console.log(typeof goal);       // undefined
