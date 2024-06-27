@@ -1,3 +1,4 @@
+// Date : 26 June 2024
 "use strict"; // treat all JS code as newer version
 console.log(3 + .3); // we can perform arithmetic operations in the console.log() 
 
