@@ -59,3 +59,29 @@ users[1].email ; // first user's email !
 // console.log(Object.values(instaUser));
 // console.log(Object.entries(instaUser));
 // console.log(instaUser.hasOwnProperty('isLoggedIn'));
+
+// Destructuring Objects 
+const india = {
+    countryCode : '91' ,
+    countryName : 'INDIA' ,
+    countryCapital : 'New Delhi' ,
+    countriesBigCities : ['Mumbai','Chandigarh','Gurgaon','Ahemdabad','Kolkata'] ,
+    countryPopulation : {
+        male : '80 Million' ,
+        female : '75 Million' 
+    }
+}
+
+// console.log(india.countriesBigCities); 
+// we can also use this :
+// const {countriesBigCities} = india;
+// console.log(countriesBigCities);
+
+// more efficient way :
+const {countriesBigCities : bigCities} = india;
+console.log(bigCities);
+// or even :
+const {countriesBigCities : Cities } = india;
+console.log(Cities);
+const {countriesBigCities : c } = india;
+console.log(c);
