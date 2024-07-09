@@ -1,0 +1,13 @@
+// Date : 9 July 2024
+'use strict' ;
+// var c = 300;
+let a = 300;
+if (true) {
+  let a = 10;
+  const b = 20;
+  console.log('INNER: ', a, b);
+}
+
+// console.log(a);
+// console.log(b); // can not access b as it define in if-else block
+// console.log(c);  
