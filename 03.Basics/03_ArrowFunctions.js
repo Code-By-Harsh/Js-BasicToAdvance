@@ -31,3 +31,49 @@ const findPercentage = (num,percentage) => {
 }
 
 console.log(findPercentage(300,15));
+
+// Date : 10 July 2024 
+
+const userOne = {
+    userName : 'Jacklin' ,
+    bankBal : 190 ,
+
+    // There are two ways to declare the funtcions inside the objects =>
+    // updateMessage: function() {} ;
+    updateMessage(){
+        // this keyword points to the objects elements  
+        // values are not Hard-Coded Here :
+        console.log(`Dear Customer , ${this.userName}. Your current bank balance is ${this.bankBal}. `);
+        console.log(this); // log the Object , Pointed by this !
+    }
+}
+
+// call the function :
+// Here we call the function with current context !
+// userOne.updateMessage() ;
+// Let's change the context :
+userOne.bankBal = 400 ;
+// userOne.updateMessage() ;
+
+// console.log(this); // {} , as here this not pointing any Object so it defaultly point to global / empty / undefined !
+// ⚠️ IN BROWSER THIS SIMPLY POINT TO WINDOWS OBJECT BY DEFAULT!
+
+// 'this' in functions :
+
+// function hoo(){
+// we cannot use this in function like this :
+//     console.log(this);
+// }
+// hoo(); // undefined 
+
+// const hoo = function(){
+//     console.log(this);
+// }
+// hoo(); // undefined 
+
+// Arrow function :
+// const hoo = () => console.log(this) ;
+// hoo() ; // {} 
+
+const addTwo = (a,b) => a+b ;
+console.log(addTwo(5,6));
