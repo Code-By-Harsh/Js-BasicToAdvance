@@ -1,0 +1,37 @@
+<!-- Date : 19 July 2024 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Js</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+</body>
+<script>
+    // Creating Div using js :
+    const div = document.createElement('div');
+    // appending div to body :
+    document.body.appendChild(div)
+    // Inserting / Creating an class to div :
+    div.className = "main" ; 
+    // Creating an id to div :
+    div.id = Math.round(Math.random() * 10 + 1)
+    // Creating title attribute to div :
+    div.setAttribute("title", "generated title")
+    // adding style to div :
+    div.style.backgroundColor = "green"
+    // adding padding :
+    div.style.padding = "12px"
+    // inserting Text : 
+    // a) Directly :
+    div.innerText = "How Are You ?"
+    // b_1 ) Creating TextNode :
+    // const addText = document.createTextNode("How Are You ?")
+    // b_2 ) Inserting / appending :
+    // div.appendChild(addText)
+    // log the div :
+    console.log(div);
+</script>
+</html>
