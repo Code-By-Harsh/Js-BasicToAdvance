@@ -16,18 +16,61 @@ const hundreds = 1000000;
 
 // console.log(Math); // Math Object {}
 // console.log(Math.abs(-4)); // convert it to postive number : 4
-// console.log(Math.round(4.5)); // round it : 5 (4.1 - 4.4 => 4 , 4.5 - 4.9 => 5)
-// console.log(Math.ceil(4.2)); // round it to minimum value ( 4.1 - 4.9 => 4)
-// console.log(Math.floor(4.9)); // round it to maximum value ( 4.1 - 4.9 => 5)
-// console.log(Math.min(4, 3, 6, 8)); // return minimum value : 3
-// console.log(Math.max(4, 3, 6, 8)); // return maximum value : 8
 
-console.log(Math.random()); // return the value between 0 to 1 (not includes pure 0 or 10)
-console.log(Math.random() * 10); // return the value between 0 to 10 (not includes pure 0 or 10)
-console.log(Math.random() * 10 + 1); // return the value between 1 to 10 (including 1.something and 10.something)
-console.log(Math.floor(Math.random() * 10) + 1); // now the value is return between 1 to 10 including 1 and 10 but not point values !
+// Find Square Root :
+console.log(Math.sqrt(25)); // 5 (5*5 = 25)
+// Find Square Root :
+console.log(25 ** (1 / 2)); // 5 (5*5 = 25)
+// Find Cubic Root :
+console.log(8 ** (1 / 3)); // 2 (2*2*2 = 8)
 
-// In Case Of Range :
-const min = 10; // min value
-const max = 20; // max value
-console.log(Math.floor(Math.random() * (max - min + 1)) + min); // return value between min and max value without point value !
+// Finding Max value :
+console.log(Math.max(1, 10, 11, 22, 13, 14)); // 22
+console.log(Math.max(1, 10, 11, '22', 13, 14)); // 22
+console.log(Math.max(1, 10, 11, '22i', 23, 14)); // NaN
+console.log(Math.max(0, true, false)); // 1
+
+// Find Min value :
+console.log(Math.min(1, 10, 11, 22, 13, 14)); // 1
+console.log(Math.min(1, 10, 11, 22, 13, false)); // 0
+
+// Find Area of Circle : 2 * pi * (radius = 10px)
+console.log(Math.PI * Number.parseFloat('10px') ** 2);
+
+// Genrates Random Number Between Given Parameters :
+const genrateRandom = (max, min) =>
+  Math.floor(Math.random() * (max - min) + 1 + min);
+
+console.log(genrateRandom(10, 20)); // 11 - 20
+// console.log(Math.trunc(Math.random() * 10) + 1 + 10);
+console.log(genrateRandom(10, -10)); // 11 - 20
+
+// Rounding Integers :
+console.log(Math.round(9.4)); // 9
+console.log(Math.round(9.5)); // 10
+console.log(Math.round(9.6)); // 10
+
+console.log(Math.trunc(9.4)); // 9
+console.log(Math.trunc(9.5)); // 9
+console.log(Math.trunc(9.6)); // 9
+
+console.log(Math.ceil(9.4)); // 10
+console.log(Math.ceil(9.6)); // 10
+
+console.log(Math.floor(9.4)); // 9
+console.log(Math.floor(9.6)); // 9
+
+// Dealing with Negative Numbers :
+console.log(Math.trunc(-9.4)); // -9
+console.log(Math.trunc(-9.6)); // -9
+console.log(Math.floor(-9.4)); // -10
+console.log(Math.floor(-9.6)); // -10
+
+// Rounding Decimals : Returns a string representing a number in fixed-point notation.
+// Parameter — Number of digits after the decimal point.
+console.log((1.4).toFixed(0)); // 1
+console.log((1.7).toFixed(0)); // 2
+console.log((1.7).toFixed(1)); // 1.7
+console.log((1.7).toFixed(3)); // 1.700
+console.log((1.73652).toFixed(2)); // 1.74
+console.log(+(1.7).toFixed(0)); // 2 (Number)
